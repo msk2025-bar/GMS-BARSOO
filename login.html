@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - My Dream School</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Student Login</h1>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="notice.html">Notice Board</a>
+  <a href="calendar.html">Calendar</a>
+  <a href="contact.html">Contact</a>
+  <a href="login.html">Login</a>
+</nav>
+
+<main>
+  <form onsubmit="login(event)">
+    <input type="text" placeholder="Username" id="username" required>
+    <input type="password" placeholder="Password" id="password" required>
+    <button type="submit">Login</button>
+  </form>
+</main>
+
+<script>
+  function login(e) {
+    e.preventDefault();
+    const u = document.getElementById('username').value;
+    const p = document.getElementById('password').value;
+    if (u === "student" && p === "1234") {
+      alert("Login successful!");
+      window.location.href = "index.html";
+    } else {
+      alert("Incorrect credentials!");
+    }
+  }
+</script>
+
+<footer>
+  <p>&copy; 2025 My Dream School</p>
+</footer>
+
+</body>
+</html>
